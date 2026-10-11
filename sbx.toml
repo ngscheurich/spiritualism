@@ -1,0 +1,24 @@
+image = "spiritualism-dev:latest"
+cpus = 2
+memory = "2G"
+shell = "/bin/bash"
+
+[build]
+context = "."
+
+[[mounts]]
+type = "bind"
+source = "~/.claude"
+target = "/root/.claude"
+
+[[mounts]]
+type = "bind"
+source = "~/.claude.json"
+target = "/root/.claude.json"
+
+[aliases]
+sh = "exec -- bash"
+pi = "exec -- pi"
+
+[network]
+policy = "public"
