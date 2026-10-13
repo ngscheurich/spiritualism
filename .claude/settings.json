@@ -1,0 +1,5 @@
+{
+  "env": {
+    "CLAUDE_CODE_ALT_SCREEN_FULL_REPAINT": "1"
+  }
+}
