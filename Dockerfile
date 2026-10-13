@@ -7,7 +7,7 @@ ENV LANG=C.UTF-8 \
 
 # Install system packages
 RUN apk add --no-cache \
-    bash curl fd file git ripgrep
+    bash curl fd file git jq python3 ripgrep
 
 # Install microsandbox
 # RUN curl -fsSL https://install.microsandbox.dev | sh
