@@ -19,6 +19,12 @@
       "skillPath": "skills/engineering/codebase-design/SKILL.md",
       "computedHash": "b2888e4f4e8c0af3bfd557575a64b905c44e6248c3101d72077816882b3a92b9"
     },
+    "commit": {
+      "source": "ngscheurich/skills",
+      "sourceType": "github",
+      "skillPath": "commit/SKILL.md",
+      "computedHash": "9cf2b71a481faf901cc85566a0d28c23081371295626e366e8a2026044263574"
+    },
     "diagnosing-bugs": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -73,6 +79,12 @@
       "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
       "computedHash": "ac2c94885f34ff8492dc12aa4543182f661f32ea1722b8d6b6c2c7045af33ae3"
     },
+    "multi-review": {
+      "source": "ngscheurich/skills",
+      "sourceType": "github",
+      "skillPath": "multi-review/SKILL.md",
+      "computedHash": "ba6493b9c042b61a35f960498616d093974fc0f35b7b53649488819a1b100450"
+    },
     "pr": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -84,6 +96,12 @@
       "sourceType": "github",
       "skillPath": "skills/engineering/prototype/SKILL.md",
       "computedHash": "d3fc74689bd993e39c44bfae510d014eecffbeec2922764b065377fd1327c0f6"
+    },
+    "recap": {
+      "source": "ngscheurich/skills",
+      "sourceType": "github",
+      "skillPath": "recap/SKILL.md",
+      "computedHash": "02edcbdff9efcdbe4c1a71f682d98762d3f9a68be4174b7ddce6ee415c64489b"
     },
     "research": {
       "source": "mattpocock/skills",
@@ -102,6 +120,12 @@
       "sourceType": "github",
       "skillPath": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
       "computedHash": "1d35d0afa3ded88c9324d38db08b2cff91cd03e0e11d64786bee41385cd7b9fb"
+    },
+    "sweep-comments": {
+      "source": "ngscheurich/skills",
+      "sourceType": "github",
+      "skillPath": "sweep-comments/SKILL.md",
+      "computedHash": "33c1c5de0733a9704d02dcb299e92c504782c85ebce6aa5aceb5c4e43320ac6f"
     },
     "tdd": {
       "source": "mattpocock/skills",
@@ -133,6 +157,12 @@
       "skillPath": "skills/engineering/to-tickets/SKILL.md",
       "computedHash": "5f871bdc46a9212222214ba399be4965374208af1bd7f48f1271bef72841dd31"
     },
+    "tour": {
+      "source": "ngscheurich/skills",
+      "sourceType": "github",
+      "skillPath": "tour/SKILL.md",
+      "computedHash": "a0a69b9294239c508a1748cacc5e898a34c84c5bc071229bcbb191c848dce140"
+    },
     "triage": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -156,6 +186,12 @@
       "sourceType": "github",
       "skillPath": "skills/engineering/wizard/SKILL.md",
       "computedHash": "49298bed80e7f722b071ad5d64798c75eb705bbbe0635b9bbffd08cd6fb81647"
+    },
+    "write-prose": {
+      "source": "ngscheurich/skills",
+      "sourceType": "github",
+      "skillPath": "write-prose/SKILL.md",
+      "computedHash": "950ed336e5716bca10507814386729e8b6d516a149ffb5957b899082c0e667f0"
     },
     "writing-for-agents": {
       "source": "mattpocock/skills",
