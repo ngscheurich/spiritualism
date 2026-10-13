@@ -17,8 +17,8 @@ source = "~/.claude.json"
 target = "/root/.claude.json"
 
 [aliases]
-sh = "exec -- bash"
-pi = "exec -- pi"
+claude = "exec -- claude"
+bash = "exec -- bash"
 
 [network]
 policy = "public"
