@@ -2,6 +2,9 @@
 
 > Get work done with the ghosts in your machine.
 
+> ![NOTE] Do not edit
+> This document is historical and not normative — it records what Spiritualism was _conceived_ to be. What the system _is_ lives in `docs/adrs/` and `GLOSSARY.md`; where anything here disagrees with those, they win, and this file is not maintained forward.
+
 This project's goal is to create a user-configurable system in which AI coding agents can perform pre-planned software development tasks in a safe, repeatable way.
 
 Some project tenets:
@@ -53,10 +56,6 @@ The server program handles core logic, state management, and process handling, w
 Communication will happen via JSON-RPC 2.0 over a Unix socket. The server maintains PTYs that the client can attach to when direct agent interaction is desired.
 
 Clients will initially consist of a CLI and TUI but could expand to, e.g. a web app, a GUI.
-
-The server is scoped to a project, rather than the host. The aim here is to keep scope in check and data isolated.
-
-Eventually, we might implement a host-level program that allows interacting with multiple projects from a single UI.
 
 ### Sandboxes
 
