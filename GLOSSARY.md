@@ -1,6 +1,6 @@
 # Spiritualism
 
-A user-configurable system in which AI coding agents perform pre-planned software development tasks in a safe, repeatable way. Terms here are normative; `docs/concept.md` is historical.
+A user-configurable system in which AI coding agents perform software development tasks in a safe, repeatable way. Terms here are normative; `docs/concept.md` is historical.
 
 ## Language
 
@@ -43,6 +43,22 @@ The integration between Spiritualism and one source of briefs, exposing a common
 
 **Workspace**:
 The environment in which a user and agent collaborate on one brief in the context of a project. A project has many workspaces; a workspace has exactly one brief.
+
+**Workflow**:
+The server-owned sequence of stages that carries one brief from planning to a merged pull request inside one workspace. A workspace has exactly one workflow run; only the server advances it.
+_Avoid_: Pipeline, job
+
+**Stage**:
+One named part of a workflow. The stages, in order, are Plan, Build, Review, Ship, and Done.
+_Avoid_: Step, phase
+
+**Gate**:
+A condition on the transition between two stages that must be satisfied before the server advances the workflow. A gate holds automated checks the server runs, a human approval, or both; checks run first. Gates are where a workflow gets its determinism and its human intervention.
+_Avoid_: Checkpoint, approval step
+
+**Attention request**:
+An agent's request for human input that it needs before it can continue its stage.
+_Avoid_: Prompt, interrupt
 
 **Sandbox**:
 An isolated environment an agent works in without compromising the host, such as a microVM or container. Every workspace runs in a sandbox.
