@@ -24,6 +24,7 @@ A v1 spec for Spiritualism: architecture decisions locked, provider interfaces a
 - [Research: Pi agent surface](issues/05-research-pi.md): Node harness with TypeScript-only SDK; headless print/JSON/RPC modes over stdio JSONL; JSONL sessions grouped by cwd; no built-in permission system; MIT.
 - [Research: Claude Code integration surface](issues/06-research-claude-code.md): `claude -p` with json/stream-json over stdio; TS and Python Agent SDK supervise the CLI as a subprocess; JSONL sessions keyed by cwd; sandbox off by default.
 - [Research: client-server IPC options](issues/07-research-ipc-options.md): survey, no pick: JSON-RPC lacks framing and binary, gRPC is Unix-socket-only off Windows, WebSocket carries PTY bytes; Node `net` covers Unix sockets and Windows pipes in one API.
+- [Tech stack for server and clients](issues/03-tech-stack.md): split stack; Elixir server (conditional on the microsandbox host task), reaching microsandbox through `msb` or a Go helper, never native code in the VM; one Go `spirit` executable for CLI and TUI on Bubble Tea v2 (provisional) with `cobra`; PTY attach needs handover only; fluency was a weighted criterion.
 
 ## Not yet specified
 
@@ -33,9 +34,10 @@ A v1 spec for Spiritualism: architecture decisions locked, provider interfaces a
 - Public API: the method and event surface the server exposes, including the live event stream, the workflow commands (start, stop, retry, send back, abandon, publish, force past), gate approvals, and the workflow event history.
 - Configuration schema: global and project levels (project file optional, project values win, server is the only reader), how providers are configured and selected. Workflow settings: per-gate human approvals and their defaults, check commands per gate, attempt and round limits, agent provider per stage.
 - CLI command surface, including `spirit init`, project add/remove, `spirit server stop [--force]`, socket and state path overrides.
-- TUI layout and interaction (likely a prototype ticket once the brief model and API exist).
-- Accessibility requirements for the TUI.
-- Direct agent-to-user interaction: PTY attach and how it coexists with the workflow, including how a human answers an attention request.
+- TUI layout and interaction (likely a prototype ticket once the brief model and API exist). The prototype also confirms or overturns Bubble Tea v2, chosen provisionally in [Tech stack for server and clients](issues/03-tech-stack.md).
+- Accessibility requirements for the TUI. Open risk from [Tech stack for server and clients](issues/03-tech-stack.md): Bubble Tea documents no screen-reader support; only its forms library `huh` has an accessible mode.
+- Direct agent-to-user interaction: PTY attach and how it coexists with the workflow, including how a human answers an attention request. Floor set by [Tech stack for server and clients](issues/03-tech-stack.md): handover (the TUI suspends and gives the whole terminal to the PTY); an embedded pane is optional.
+- Distribution: how the Elixir server ships (Mix release or Burrito), and how the server and the Go client reach a user as one install. The server runs undistributed during development.
 
 ## Out of scope
 
